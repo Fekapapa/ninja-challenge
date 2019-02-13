@@ -10,7 +10,7 @@ interface ComponentState {
 
 type State = Readonly<ComponentState>;
   
-export class TodoForm extends React.Component<Props, State> {
+export class TodoAppInput extends React.Component<Props, State> {
 	constructor(props: Props) {
 		super(props);
 		this.state = { inputValue: "" };
@@ -25,7 +25,7 @@ export class TodoForm extends React.Component<Props, State> {
 		if (!inputValue) return;
 
 		addTodo(inputValue);
-		
+
 		this.setState({inputValue: ""});
 	};
 

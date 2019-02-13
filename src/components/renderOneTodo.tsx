@@ -1,18 +1,18 @@
 import React from 'react';
 
-interface todoUnit {
+interface todoElement {
   text: string;
   isCompleted: boolean;
 }
 
 interface TodoParameters {
-	todo: todoUnit;
+	todo: todoElement;
 	index: number;
 	completeTodo: (index: number) => void;
 	removeTodo: (index: number) => void;
 }
 
-export const RenderTodo = ({ todo, index, completeTodo, removeTodo }: TodoParameters) => {
+export const RenderOneTodo = ({ todo, index, completeTodo, removeTodo }: TodoParameters) => {
 	return (
 		<div
 			className="todo"
