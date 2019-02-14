@@ -29,6 +29,12 @@ export class TodoAppInput extends React.Component<Props, State> {
 		this.setState({inputValue: ""});
 	};
 
+	handleChange = (event: React.SyntheticEvent<HTMLInputElement>) => {
+		event.preventDefault();
+
+		this.setState({ inputValue: event.currentTarget.value })
+	};
+
 	render() {
 		const { inputValue } = this.state;
 
@@ -38,7 +44,7 @@ export class TodoAppInput extends React.Component<Props, State> {
 					type="text"
 					className="input"
 					value={inputValue}
-					onChange={e => this.setState({ inputValue: e.target.value })}
+					onChange={this.handleChange}
 				/>
 			</form>
 		);

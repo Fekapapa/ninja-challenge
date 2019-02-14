@@ -37,7 +37,7 @@ export class TodoApp extends React.Component<Props, State> {
     const newTodo = { text: text, isCompleted: false };
     const newTodos = [...todos, newTodo];
 
-    this.setState({ todos: newTodos })
+    this.setState({ todos: newTodos });
   };
 
   completeTodo = (index: number) => {
@@ -46,7 +46,7 @@ export class TodoApp extends React.Component<Props, State> {
 
     originalTodos[index].isCompleted = true;
 
-    this.setState({ todos: originalTodos })
+    this.setState({ todos: originalTodos });
   };
 
   removeTodo = (index: number) => {
@@ -54,7 +54,7 @@ export class TodoApp extends React.Component<Props, State> {
     const originalTodos = [...todos];
 
     originalTodos.splice(index, 1);
-    this.setState({ todos: originalTodos })
+    this.setState({ todos: originalTodos });
   };
 
   render() {
